@@ -24,9 +24,8 @@ function DashboardLayout(
           user&&checkTeam();
     },[user])
     const checkTeam=async()=>{
-          const result=await convex.query(api.teams.getTeam,
-            {email:user?.email});
-            
+          // const result=await convex.query(api.teams.getTeam,{email:user?.email});
+            const result=await convex.query(api.teams.getTeamsByEmail, {email:user?.email});
             if(!result?.length)
             {
         router.push('teams/create')

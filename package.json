@@ -3,15 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "convex deploy && next build",
     "start": "next start"
   },
-  "scripts": {
-  "dev": "next dev",
-  "build": "convex deploy && next build",
-  "start": "next start"
-},
   "dependencies": {
     "@editorjs/checklist": "^1.6.0",
     "@editorjs/editorjs": "^2.31.0",
